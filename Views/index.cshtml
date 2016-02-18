@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="Content/css/styles.css">
+
+
+    <title>Scrabble</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Enter your phrase and the word you'd like to search that phrase for</h1>
+
+      <form action="/" method="post">
+        <input name = "phrase" placeholder = "Phrase"></input>
+        <button class = "btn btn-info">How Many Points Is My Word Worth</button>
+      </form>
+
+      @{
+        if(@Model != null)
+        {
+          <p>@Model</p>
+          <form action="/">
+            <button class = "btn btn-info">reset</button>
+          </form>
+        }
+
+      }
+
+
+    </div>
+  </body>
+</html>
